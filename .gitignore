@@ -1,0 +1,9 @@
+#configuracion de IDEs
+.vscode/
+.idea/
+
+# Archivos de entorno
+.env
+
+
+
