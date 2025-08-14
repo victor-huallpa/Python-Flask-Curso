@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estrucutra de Datos</title>
+</head>
+<body>
+    <h1>Estrucutra de Datos</h1>
+    <h3>Listas</h3>
+    <h4>Cartelera de Cine: </h4>
+    <ol>
+        <!-- elementos de la Listas -->
+        <li>{{ movies[0] }}</li>
+        <li>{{ movies[1] }}</li>
+        <li>{{ movies[2] }}</li>
+
+        <!-- iteracion con jinja -->
+         {% for movie in movies %}
+            <li>{{ movie.peliculas|e }}</li>
+        {% endfor %}
+    </ol>
+
+    <h3>Diccionarios</h3>
+    <h4>Pelicula Destacada</h4>
+    <p>
+        La pelicula destacada de hoy es: {{destacada['Nombre']}}, la cual fue estrenada el anio {{destacada["Anio"]}}
+        y cuyo protagonista es {{destacada["Protagonista"]}}
+    </p>
+
+    <h3>KWARGS</h3>
+    <h4>Pelicula destacada</h4>
+    <p>
+        La pelicula destacada de hoy es: {{Nombre}}, la cual fue estrenada {{Anio}}
+        y cuyo protagonista es {{Protagonista}}
+    </p>
+
+    <h3>CLASES</h3>
+    <h4>Pelicula Favorita:</h4>
+    <p>
+        Mi pelicula favorita es: {{ favorita.nombre}}, que fufe publicada el anio {{favorita.anio}} y
+        cuyo protagonista es {{favorita.protagonista}}
+    </p>
+</body>
+</html>
