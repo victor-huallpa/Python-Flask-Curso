@@ -47,6 +47,22 @@ def curso_2():
     #retornamos el archivo html y las varaibles que su usarasn en la pagina
     return render_template(template_name_or_list="modificable.html",nombre="victor",curso="PHP")
 
+#envio de variables para realizar operaciones
+@app.route("/expresiones")
+def expresiones():
+    return render_template("expresiones.html", nombre='victor', apellido='huallpa', color='verde', altura=45, base=14)
+
+@app.route("/expresiones2")
+def expresiones2():
+    #entraga de datos con un diccionario 'kwargs
+    kwargs = {
+        "nombre":"victor",
+        "apellido":"huallpa",
+        "color":'naranja',
+        "base":2,
+        "altura":5
+    }
+    return render_template("expresiones.html", **kwargs)
 
 #ejecuta flask 
 if __name__ == "__main__":
