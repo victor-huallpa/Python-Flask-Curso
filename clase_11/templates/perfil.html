@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block titulo%} WEB | {{user[0]}} {%endblock%}
+
+{% block content %}
+<!-- main default -->
+    <h1>Biografia de {{user[0]}}</h1>
+    <p>{{user[1]}}</p>
+{% endblock %}

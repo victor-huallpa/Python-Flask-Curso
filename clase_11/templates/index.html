@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block titulo%} INICIO {%endblock%}
+
+{% block content %}
+<!-- main default -->
+    <h1>Usuarios</h1>
+    <ul>
+        {% for user in users %}
+            <li>
+                <a href="{{ url_for('perfil_user', username = user)}}">{{user}}</a>
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}
