@@ -1,0 +1,13 @@
+    <!-- macro: es la forma de usar una funcion en plantilla de html -->
+    {% macro lista_usuario(lista_de_usuarios) %}
+        <ul>
+
+            {% for user, type in lista_de_usuarios %}
+                <li>
+                    {{ "[administrador]" if type == "admin" else "[usuario normal]"}} - {{user}}
+                </li>
+
+            {% endfor %}
+        </ul>
+
+    {% endmacro %}
