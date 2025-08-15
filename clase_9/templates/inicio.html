@@ -1,0 +1,13 @@
+<!-- extendemos la pagina a la base del html que tenemos -->
+{% extends 'base.html'%}
+
+<!-- llamamos a los bloques que tenemos en la base y editamos el contenido que deseamos colocar -->
+{% block titulo %} Inicio {% endblock %}
+{% block h1%}
+<h1>Pagina Inicio</h1>
+{% endblock %}
+
+{% block contenido%}
+<h2>Bienvenido al Inicio</h2>
+<p>Esta es la pagina de Inicio</p>
+{% endblock %}
