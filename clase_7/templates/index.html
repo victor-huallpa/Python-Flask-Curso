@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usuario</title>
+</head>
+<body>
+    {% set name = "Juan Carlos" %}
+    <!-- filtros que se pueden usar con jinja -->
+    {% set num_user = users | length %}
+    {% set unidos = users | join(' ') %}
+    <h2>Usuarios</h2>
+    {% if num_user > 0 %}
+        <p>Se encontraron {{num_user}} usuarios</p>
+        <ul>
+
+                {%for user in users %}
+                    <li>
+                        {{user|e}}
+                    </li>
+                {% endfor %}
+
+            <p>{{name}}</p>
+        </ul>
+    {% else %}
+        <p>No se encontraron usuarios</p>
+    {% endif %}
+
+    <p>Unidos {{unidos}}</p>
+</body> 
+</html>
