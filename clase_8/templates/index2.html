@@ -1,4 +1,4 @@
-{% from "macro.jinja2" import lista_usuario %}
+{% import "macro.jinja2" as m  %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -10,7 +10,8 @@
 <body>
 
     <h2>Tipos de usuarios</h2>
-        {{lista_usuario(users2)}}
+        {{m.lista_usuario(users2)}}
+        {{m.saludo()}}
 
 </body>
 </html>
