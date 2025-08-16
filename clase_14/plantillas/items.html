@@ -1,0 +1,14 @@
+<!-- importamos la macro -->
+ {% from 'item-list.html' import item_list, disenio %}
+
+<!DOCTYPE html>
+<html >
+<head>
+    {{disenio()}}
+</head>
+<body>
+    
+    {% include 'layout/header.html' %}
+    {{item_list(items)}}
+</body>
+</html>

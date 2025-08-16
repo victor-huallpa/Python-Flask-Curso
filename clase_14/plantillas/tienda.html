@@ -1,0 +1,14 @@
+ {% from 'item-list.html' import item_list %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+</head>
+<body>
+    {% include 'layout/header.html' %}
+    <h2>{{ nombre }}</h2>
+    <p>Tinda unicada en {{direccion}}. Tiene {{empleados | length}} empleados. </p>
+    {{item_list(items)}}
+
+</body>
+</html>

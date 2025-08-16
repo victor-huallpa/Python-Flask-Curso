@@ -1,0 +1,14 @@
+{% macro disenio() %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}">
+{% endmacro %}
+
+{% macro item_list(items) %}
+<section>
+    <h2>productos en la tienda</h2>
+    <ul>
+        {% for item in items %}
+            <li> {{item['nombre']}} - {{item['cantidad']}} </li>
+        {% endfor %}
+    </ul>
+</section>
+{% endmacro %}

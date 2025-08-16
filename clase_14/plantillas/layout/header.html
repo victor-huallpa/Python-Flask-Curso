@@ -1,0 +1,16 @@
+<header>
+    <p class="cabecera">Cabecera</p>
+
+    {% if title %}
+        <p class="title">{{ title }}</p>
+    {% endif %}
+    <nav>
+        <ul class="links">
+            <li class="link"><a href="{{ url_for('inicio')}}">Inicio</a></li>
+            <li class="link"><a href="#">Quienes Somos?</a></li>
+            <li class="link"><a href="#">Blog</a></li>
+            <li class="link"><a href="{{ url_for('tienda')}}">Tienda</a></li>
+            <li class="link"><a href="{{ url_for('items_show')}}">Items</a></li>
+        </ul>
+    </nav>
+</header>
