@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Pagina Registro</h1>
+    <!-- url for ayuda a que la ruta del link sea dependiendo a l oque pide la fucnion y no estar asignadole manualmente -->
+    <a href="{{ url_for('login')}}">Logearce</a>
+    <a href="{{ url_for('home')}}">Home</a>
+{% endblock %}

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- inidcamos que mandaremos elementos esticos como archovs  css o demas con 'static' -->
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'css/style.css') }}">
+    <title>
+        {% block title %} My Page | Riout {%endblock%}
+    </title>
+    {%block head%}
+    {%endblock%}
+</head>
+<body>
+    {% block content %}
+        <h1>hello</h1>
+    {% endblock %}
+</body>
+</html>
