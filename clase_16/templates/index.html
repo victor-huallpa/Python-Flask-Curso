@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inyeccion</title>
+</head>
+<body>
+    <h1>Pagina inicio</h1>
+    <!-- filtro safe convierte string a markup  -->
+     <h3>con filtro safe</h3>
+    {{inyection | safe}}
+
+    <!-- sin el filtro lo deja como strring o texto comun -->
+    <h3>sin filtro safe</h3>
+    {{inyection}}
+</body>
+</html>

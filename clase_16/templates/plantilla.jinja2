@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inyeccion</title>
+</head>
+<body>
+    <h1>Pagina inicio</h1>
+    <!-- filtro escape  convierte lo que sea que se este mandando desde python a string-->
+     <h3>sin filtro en jinja2 lo considera como html si en caso se este manda html inyection</h3>
+    {{inyection}}
+
+    <!-- con el filtro escape en jinja2 lo convierte a string lo que sea que se le este mando ya sea numeos , html entre otros lo convierte a string -->
+    <h3>con filtro e 'escape'</h3>
+    {{inyection | e}}
+</body>
+</html>
