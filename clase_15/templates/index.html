@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>consumo de espacios</title>
+</head>
+<body>
+    <!-- el guion '-' dentro las llaves quita espacios quetenga ya sea a la izquierda o derecha dependiendo de su posison que sea colocada -->
+    <h1>
+        {{- word -}}
+        {{ word }}
+    </h1>
+    <ul>
+        {%- for dato in lista %}
+            <li>
+                {{-dato-}}
+                {{dato}}
+            </li>
+        {%- endfor -%}
+    </ul>
+
+</body>
+</html>
