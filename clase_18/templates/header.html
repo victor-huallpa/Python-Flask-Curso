@@ -1,0 +1,8 @@
+    <nav>
+        {% if request.path == url_for('register') %}
+            <a href="{{url_for('index')}}">Inicio</a>
+        {% else %}
+            <a href="{{url_for('register')}}">Register</a>
+        {% endif %}
+    </nav>
+
