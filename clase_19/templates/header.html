@@ -1,0 +1,10 @@
+    <nav>
+        {% if request.path == url_for('register') %}
+            <a href="{{url_for('index')}}">Inicio</a>
+        {% elif request.path == url_for('login') %}
+            <a href="{{url_for('register')}}">Registrace</a>
+        {% else %}
+            <a href="{{url_for('logout')}}">Cerrar sesion</a>
+        {% endif %}
+    </nav>
+
