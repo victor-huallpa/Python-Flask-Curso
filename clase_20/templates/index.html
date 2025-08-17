@@ -6,7 +6,8 @@
     <title>hash</title>
 </head>
 <body>
-    <h1>hashear palabra</h1>
+    <h1>HASH</h1>
+    <h2>hashear palabra</h2>
 
     <form action="" method="post">
         <label for="word">Ingresa palabra</label>
@@ -14,10 +15,23 @@
         <input type="submit" value="Hashear Palabra">
     </form>
     <p><strong>Plabra Hasheada</strong></p>
-    {% if word_hashed %}
-        {% for word, hash in word_hashed.items() %}
-            <p><strong>{{ word }}</strong> → {{ hash }}</p>
-        {% endfor %}
-    {% endif %}
-</body>
+        {% if word_hashed %}
+            {% for word, hash in word_hashed.items() %}
+                <p><strong>{{ word }}</strong> → {{ hash }}</p>
+            {% endfor %}
+        {% endif %}
+    </body>
+    <h2>Verifcar palabra</h2>
+
+    <form action="" method="POST">
+        <label for="word_ve">Ingresa palabra</label>
+        <input type="text" name="word_ve" id="word_ve">
+        <input type="submit" value="verifcar Palabra">
+    </form>
+    <p><strong>Plabra Verifcada</strong></p>
+        {% if word_verify %}
+            <p>{{ word_verify }}</p>
+        {% endif %}
+    </body>
+
 </html>

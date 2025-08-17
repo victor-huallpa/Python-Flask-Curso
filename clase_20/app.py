@@ -9,13 +9,22 @@ app.secret_key = 'supersecreto'
 words = {}
 @app.route('/', methods = ['GET', 'POST'])
 def home():
-    if request.method == 'POST':
-        word = request.form['word']
+    messages = 'sin mensaje'   # siempre inicializado
+    
+    if request.method == 'POST' and request.form.get('word'):
+        word = request.form.get('word')
         word_hash = pbkdf2_sha256.hash(word)
         words[word] = word_hash
         return redirect(url_for('home'))
     
-    return render_template('index.html', word_hashed=words)
+    if request.method == 'POST' and request.form.get('word_ve'):
+        word = request.form.get('word_ve')
+        if word in words and pbkdf2_sha256.verify(word, words[word]):
+            messages = f"{word} es verificado al hash {words[word]}"
+        else:
+            messages = f"La palabra {word} no existe"
+
+    return render_template('index.html', word_hashed=words, word_verify=messages)
 
 if __name__ == "__main__":
     app.run(debug=True)
