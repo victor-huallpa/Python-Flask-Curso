@@ -1,0 +1,31 @@
+{% from "macro.html" import render_card %}
+
+{% call render_card(title='Mi tarjeta') %}
+    <p>Este es un contenido personalizado para tarjete.</p>
+    <p>Otro parrafo con mas informaicon.</p>
+
+{% endcall %}
+
+{% call render_card(title='Proyectos') %}
+    <ul>
+        <li>Proyecto 1</li>
+        <li>Proyecto 2</li>
+    </ul>
+
+{% endcall %}
+
+
+{% call render_card(title='Contactos') %}
+    <ul>
+        <li>Email: user@gmail.com</li>
+        <li>Address: Jr Abancay n 123</li>
+    </ul>
+
+{% endcall %}
+
+{% for card in cards %}
+    {% call render_card(title=card.title) %}
+        {{ card.content | safe }}
+    {% endcall %}
+
+{% endfor %}
