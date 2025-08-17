@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hash</title>
+</head>
+<body>
+    <h1>hashear palabra</h1>
+
+    <form action="" method="post">
+        <label for="word">Ingresa palabra</label>
+        <input type="text" name="word" id="word">
+        <input type="submit" value="Hashear Palabra">
+    </form>
+    <p><strong>Plabra Hasheada</strong></p>
+    {% if word_hashed %}
+        {% for word, hash in word_hashed.items() %}
+            <p><strong>{{ word }}</strong> → {{ hash }}</p>
+        {% endfor %}
+    {% endif %}
+</body>
+</html>
